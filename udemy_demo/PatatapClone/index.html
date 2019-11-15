@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/PatatapClone.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+TC&display=swap" rel="stylesheet">
     <script type="text/javascript" src="js\lib\paper-full.js"></script>
     <script type="text/javascript" src="js\lib\howler.js"></script>
 
@@ -13,18 +14,7 @@
 
     <script type="text/paperscript" canvas="myCanvas">
 
-        // set the data object in "js\data.js" 
-        // the data looks like this:
-        // 
-        // var keyData={
-        //     a:{
-        //         color:"purple",
-        //         sound: new Howl({
-        //         src: ['sounds/bubbles.mp3']
-        //         }),
-        //     },
-
-        // }........
+    
 
     
 
@@ -66,10 +56,26 @@
 
 
     </script>
-    <title>Circle</title>
+   
+    <title>PatatapClone</title>
 </head>
 <body>
+    <div class="hint">
+        <p class="message">請按下任意按鈕，並打開喇叭</p>
+    </div>
+    
     <canvas id="myCanvas" resize></canvas>
+    
+
+
+    <script type="text/javascript">
+        var body= document.querySelector("body");
+        body.addEventListener("keypress",function(){
+            document.querySelector(".message").classList.add("closed");
+        })    
+    </script>
 
 </body>
+
+
 </html>
